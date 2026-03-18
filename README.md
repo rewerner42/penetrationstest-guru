@@ -41,6 +41,15 @@ git push -u origin main
    - Build output directory: `dist`
 6. Deployment starten.
 
+Wenn Cloudflare in deinem Projekt statt eines klassischen Pages-Builds einen
+verpflichtenden `Deploy command` erwartet, dann nutze dieses Repo mit:
+
+- Build command: `npm run build`
+- Deploy command: `npx wrangler deploy`
+
+Die `wrangler.jsonc` ist dafuer vorbereitet und deployed die statischen Assets
+aus `dist`.
+
 ### Variante B: Direkt per Wrangler deployen
 
 ```bash
