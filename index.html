@@ -3,224 +3,169 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>penetrationstest.guru | Penetrationstests mit Klarheit</title>
+    <title>Pentest Guru | Penetrationstests fur Web, API und Infrastruktur</title>
     <meta
       name="description"
-      content="penetrationstest.guru hilft Unternehmen mit strukturierten Penetrationstests, verständlichen Reports und klaren Handlungsempfehlungen."
+      content="Pentest Guru bietet manuelle Penetrationstests fur Webanwendungen, APIs und Infrastruktur mit klarer Priorisierung, technischen Reports und Retests."
     />
     <meta
       name="keywords"
-      content="Penetrationstest, Pentest, Web Security, API Security, Red Team, Cybersecurity"
+      content="Penetrationstest, Pentest, Pentest Guru, Web Security, API Security, Infrastructure Security, Retest"
     />
-    <meta name="theme-color" content="#0d1b2a" />
+    <meta name="theme-color" content="#0a1010" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700&family=Manrope:wght@400;500;600;700&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Rajdhani:wght@500;600;700&family=Source+Sans+3:wght@400;500;600;700&display=swap"
       rel="stylesheet"
     />
     <script type="module" src="/src/main.js"></script>
   </head>
   <body>
-    <div class="page-shell">
-      <header class="site-header">
-        <a class="brand" href="#top" aria-label="Zur Startseite">
-          <span class="brand-mark">PT</span>
-          <span class="brand-copy">
-            <strong>penetrationstest.guru</strong>
-            <small>Trusted Offensive Security</small>
-          </span>
-        </a>
-        <nav class="site-nav">
-          <a href="#leistungen">Leistungen</a>
-          <a href="#prozess">Prozess</a>
-          <a href="#kontakt">Kontakt</a>
-        </nav>
-      </header>
+    <header class="site-header">
+      <a class="brand" href="#top" aria-label="Pentest Guru Startseite">
+        <img src="/assets/pentest-guru-logo.png" alt="" />
+        <span>
+          <strong>Pentest Guru</strong>
+          <small>penetrationstest.guru</small>
+        </span>
+      </a>
+      <nav class="site-nav" aria-label="Hauptnavigation">
+        <a href="#leistungen">Leistungen</a>
+        <a href="#prozess">Prozess</a>
+        <a href="#kontakt">Kontakt</a>
+      </nav>
+    </header>
 
-      <main id="top">
-        <section class="hero">
-          <div class="hero-copy">
-            <p class="eyebrow">Penetrationstests mit Fokus auf echten Risiken</p>
-            <h1>
-              Wir finden nicht nur Schwachstellen.
-              <span>Wir zeigen, was wirklich kritisch ist.</span>
-            </h1>
-            <p class="hero-text">
-              penetrationstest.guru unterstutzt Unternehmen mit strukturierten
-              Penetrationstests fur Webanwendungen, APIs, Infrastruktur und
-              interne Umgebungen. Klar priorisiert, technisch tief und fur
-              Entscheider verstandlich.
-            </p>
-            <div class="hero-actions">
-              <a class="button button-primary" href="#kontakt">Erstgesprach anfragen</a>
-              <a class="button button-secondary" href="#leistungen">Leistungsprofil ansehen</a>
-            </div>
-            <ul class="hero-points">
-              <li>Manuelle Tests statt reiner Scanner-Berichte</li>
-              <li>Verstandliche Executive Summary fur Management und Technik</li>
-              <li>Saubere Retests nach der Behebung</li>
-            </ul>
+    <main id="top">
+      <section class="hero">
+        <img
+          class="hero-emblem"
+          src="/assets/pentest-guru-logo.png"
+          alt="Pentest Guru Logo mit Guru, Laptop und Servern"
+        />
+        <div class="hero-content">
+          <p class="eyebrow">Offensive Security fur reale Angriffswege</p>
+          <h1>Pentest Guru</h1>
+          <p class="hero-tagline">Breach the gates, before attackers do.</p>
+          <p class="hero-text">
+            Manuelle Penetrationstests fur Webanwendungen, APIs und Infrastruktur.
+            Technisch tief, klar priorisiert und so dokumentiert, dass Entwicklung,
+            Security und Management gemeinsam handeln konnen.
+          </p>
+          <div class="hero-actions">
+            <a class="button button-primary" href="#kontakt">Pentest anfragen</a>
+            <a class="button button-secondary" href="#leistungen">Leistungen ansehen</a>
           </div>
+          <div class="hero-proof" aria-label="Pentest Schwerpunkte">
+            <span>Web Apps</span>
+            <span>APIs</span>
+            <span>Infrastructure</span>
+            <span>Retests</span>
+          </div>
+        </div>
+      </section>
 
-          <aside class="hero-panel">
-            <div class="signal-card">
-              <p class="signal-label">Typische Einsatzfalle</p>
-              <ul>
-                <li>Release vor Go-live absichern</li>
-                <li>Kunden- oder ISO-Anforderungen erfullen</li>
-                <li>Externe Sicht auf interne Sicherheitsannahmen</li>
-              </ul>
-            </div>
-            <div class="metric-grid">
-              <article>
-                <strong>Web</strong>
-                <span>OWASP-basierte Analysen und Business-Logic-Tests</span>
-              </article>
-              <article>
-                <strong>API</strong>
-                <span>Auth, Authorization, Rate Limits und Abuse Cases</span>
-              </article>
-              <article>
-                <strong>Infra</strong>
-                <span>Externe Angriffsflache, Hardening und Fehlkonfigurationen</span>
-              </article>
-              <article>
-                <strong>Retest</strong>
-                <span>Nachweis der Wirksamkeit von Fixes</span>
-              </article>
-            </div>
-          </aside>
-        </section>
-
-        <section class="section" id="leistungen">
-          <div class="section-heading">
-            <p class="eyebrow">Leistungen</p>
-            <h2>Pentest-Services fur moderne Angriffsflachen</h2>
-          </div>
-          <div class="service-grid">
-            <article class="service-card">
-              <h3>Web Application Pentest</h3>
-              <p>
-                Tiefgehende Prufung von Authentifizierung, Rechtekonzepten,
-                Session-Handling, Uploads, Business Logic und klassischem
-                OWASP-Risiko.
-              </p>
-            </article>
-            <article class="service-card">
-              <h3>API Security Assessment</h3>
-              <p>
-                REST- und GraphQL-Schnittstellen auf Objektzugriffe, Token-Flows,
-                Rate Limits, Mass Assignment und fehlerhafte Trust-Boundaries
-                testen.
-              </p>
-            </article>
-            <article class="service-card">
-              <h3>External Infrastructure Review</h3>
-              <p>
-                Sichtbare Systeme, VPN-Einstiege, Admin-Panels und exponierte
-                Dienste aus Angreiferperspektive validieren.
-              </p>
-            </article>
-            <article class="service-card">
-              <h3>Retest und Beratungsbegleitung</h3>
-              <p>
-                Findings gemeinsam priorisieren, Fixes technisch einordnen und
-                anschliessend nachvollziehbar nachtesten.
-              </p>
-            </article>
-          </div>
-        </section>
-
-        <section class="section section-accent" id="prozess">
-          <div class="section-heading">
-            <p class="eyebrow">Ablauf</p>
-            <h2>Ein klarer Prozess, damit Sicherheit planbar wird</h2>
-          </div>
-          <div class="timeline">
-            <article>
-              <span>01</span>
-              <h3>Scope & Zielbild</h3>
-              <p>
-                Gemeinsam definieren wir Systeme, Testtiefe, Testfenster,
-                Ansprechpartner und Erfolgskriterien.
-              </p>
-            </article>
-            <article>
-              <span>02</span>
-              <h3>Hands-on Testing</h3>
-              <p>
-                Wir kombinieren strukturierte Methodik mit manueller Exploration,
-                um reale Angriffspfade sichtbar zu machen.
-              </p>
-            </article>
-            <article>
-              <span>03</span>
-              <h3>Reporting ohne Rauschen</h3>
-              <p>
-                Du bekommst reproduzierbare Findings, Priorisierung nach Risiko
-                und konkrete Empfehlungen zur Behebung.
-              </p>
-            </article>
-            <article>
-              <span>04</span>
-              <h3>Retest & Abschluss</h3>
-              <p>
-                Nach den Fixes validieren wir die Umsetzung und dokumentieren den
-                Status fur interne und externe Stakeholder.
-              </p>
-            </article>
-          </div>
-        </section>
-
-        <section class="section">
-          <div class="trust-layout">
-            <div>
-              <p class="eyebrow">Warum penetrationstest.guru</p>
-              <h2>Technische Tiefe plus klare Kommunikation</h2>
-              <p class="trust-text">
-                Viele Reports listen Schwachstellen auf. Gute Pentests helfen bei
-                Entscheidungen. Die Marke penetrationstest.guru steht fur
-                technische Substanz, nachvollziehbare Priorisierung und einen
-                partnerschaftlichen Umgang mit internen Teams.
-              </p>
-            </div>
-            <div class="trust-list">
-              <div>
-                <strong>Risiko statt Aktionismus</strong>
-                <p>Wir trennen echte Ausnutzbarkeit von theoretischen Funden.</p>
-              </div>
-              <div>
-                <strong>Fur Tech und Management</strong>
-                <p>Berichte funktionieren fur Entwickler, Security und Leitung.</p>
-              </div>
-              <div>
-                <strong>Pragmatisch umsetzbar</strong>
-                <p>Empfehlungen orientieren sich an realen Entwicklungsprozessen.</p>
-              </div>
-            </div>
-          </div>
-        </section>
-
-        <section class="section cta-section" id="kontakt">
-          <div>
-            <p class="eyebrow">Kontakt</p>
-            <h2>Bereit fur einen ersten Penetrationstest?</h2>
+      <section class="section section-intro" id="leistungen">
+        <div class="section-heading">
+          <p class="eyebrow">Leistungen</p>
+          <h2>Schwachstellen finden, Angriffswege verstehen, Fixes belastbar machen.</h2>
+        </div>
+        <div class="service-grid">
+          <article class="service-card">
+            <span>01</span>
+            <h3>Web Application Pentest</h3>
             <p>
-              Nutze diese Seite als Basis und ersetze im nachsten Schritt die
-              Platzhalter durch deine echten Kontaktdaten, Referenzen und
-              Angebotsbausteine.
+              Authentifizierung, Rechtekonzepte, Session-Handling, Uploads,
+              Business Logic und OWASP-Risiken werden manuell gepruft.
             </p>
-          </div>
-          <div class="contact-card">
-            <a href="mailto:hallo@penetrationstest.guru">hallo@penetrationstest.guru</a>
-            <p>Antwortzeit typischerweise innerhalb eines Werktags</p>
-            <a class="button button-primary" href="mailto:hallo@penetrationstest.guru">
-              Anfrage senden
-            </a>
-          </div>
-        </section>
-      </main>
-    </div>
+          </article>
+          <article class="service-card">
+            <span>02</span>
+            <h3>API Security Assessment</h3>
+            <p>
+              REST- und GraphQL-Schnittstellen werden auf Objektzugriffe,
+              Token-Flows, Rate Limits und fehlerhafte Trust-Boundaries getestet.
+            </p>
+          </article>
+          <article class="service-card">
+            <span>03</span>
+            <h3>Infrastructure Review</h3>
+            <p>
+              Externe Angriffsflachen, VPN-Einstiege, Admin-Panels,
+              Fehlkonfigurationen und exponierte Dienste werden validiert.
+            </p>
+          </article>
+          <article class="service-card">
+            <span>04</span>
+            <h3>Retest & Beratung</h3>
+            <p>
+              Findings werden priorisiert, Fixes technisch eingeordnet und nach
+              der Umsetzung nachvollziehbar erneut gepruft.
+            </p>
+          </article>
+        </div>
+      </section>
+
+      <section class="section process-section" id="prozess">
+        <div class="section-heading">
+          <p class="eyebrow">Prozess</p>
+          <h2>Ein Pentest-Ablauf ohne Rauschen.</h2>
+        </div>
+        <div class="process-grid">
+          <article>
+            <strong>Scope</strong>
+            <p>Systeme, Testtiefe, Zeitfenster, Zugange und Ziele sauber festlegen.</p>
+          </article>
+          <article>
+            <strong>Attack Path</strong>
+            <p>Automatisierte Hinweise mit manueller Exploration und Abuse Cases verbinden.</p>
+          </article>
+          <article>
+            <strong>Report</strong>
+            <p>Reproduzierbare Findings, Risiko, Evidenz und konkrete Fix-Empfehlungen.</p>
+          </article>
+          <article>
+            <strong>Retest</strong>
+            <p>Behebung verifizieren und Status fur interne sowie externe Stakeholder festhalten.</p>
+          </article>
+        </div>
+      </section>
+
+      <section class="section trust-section">
+        <div class="trust-copy">
+          <p class="eyebrow">Arbeitsweise</p>
+          <h2>Technische Tiefe mit klarer Prioritat.</h2>
+          <p>
+            Pentest Guru trennt theoretische Scanner-Funde von real ausnutzbaren
+            Risiken. Das Ergebnis ist kein Fund-Katalog, sondern eine belastbare
+            Entscheidungsgrundlage fur sichere Releases und nachhaltige Behebung.
+          </p>
+        </div>
+        <div class="signal-panel">
+          <p class="panel-label">Report-Fokus</p>
+          <ul>
+            <li>Executive Summary fur schnelle Risikoeinschatzung</li>
+            <li>Technische Details mit klaren Reproduktionsschritten</li>
+            <li>Priorisierung nach Ausnutzbarkeit und Business Impact</li>
+            <li>Retest-Nachweis nach erfolgreicher Behebung</li>
+          </ul>
+        </div>
+      </section>
+
+      <section class="section cta-section" id="kontakt">
+        <div>
+          <p class="eyebrow">Kontakt</p>
+          <h2>Bereit, die Tore vor dem Go-live zu testen?</h2>
+          <p>
+            Teile Scope, Zielsysteme und Zeitfenster. Danach folgt eine klare
+            Einschatzung zu Testtiefe, Aufwand und sinnvoller Priorisierung.
+          </p>
+        </div>
+        <a class="contact-link" href="mailto:hallo@penetrationstest.guru">
+          hallo@penetrationstest.guru
+        </a>
+      </section>
+    </main>
   </body>
 </html>
