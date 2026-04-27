@@ -30,7 +30,18 @@
           <small>penetrationstest.guru</small>
         </span>
       </a>
-      <nav class="site-nav" aria-label="Hauptnavigation">
+      <button
+        class="menu-toggle"
+        type="button"
+        aria-label="Menu offnen"
+        aria-expanded="false"
+        aria-controls="site-menu"
+      >
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+      <nav class="site-nav" id="site-menu" aria-label="Hauptnavigation">
         <a href="#leistungen">Leistungen</a>
         <a href="#prozess">Prozess</a>
         <a href="#kontakt">Kontakt</a>
@@ -153,18 +164,72 @@
         </div>
       </section>
 
-      <section class="section cta-section" id="kontakt">
-        <div>
+      <section class="section contact-section" id="kontakt">
+        <div class="contact-copy">
           <p class="eyebrow">Kontakt</p>
-          <h2>Bereit, die Tore vor dem Go-live zu testen?</h2>
+          <h2>Starten wir mit einem klaren Scope.</h2>
           <p>
             Teile Scope, Zielsysteme und Zeitfenster. Danach folgt eine klare
             Einschatzung zu Testtiefe, Aufwand und sinnvoller Priorisierung.
           </p>
+          <a class="contact-mail" href="mailto:hallo@penetrationstest.guru">
+            hallo@penetrationstest.guru
+          </a>
         </div>
-        <a class="contact-link" href="mailto:hallo@penetrationstest.guru">
-          hallo@penetrationstest.guru
-        </a>
+        <form
+          class="inquiry-form"
+          action="mailto:hallo@penetrationstest.guru"
+          method="post"
+          enctype="text/plain"
+          data-recipient="hallo@penetrationstest.guru"
+        >
+          <div class="form-grid">
+            <label class="field">
+              <span class="form-label">Name</span>
+              <input type="text" name="name" placeholder="Dein Name" autocomplete="name" required />
+            </label>
+            <label class="field">
+              <span class="form-label">E-Mail</span>
+              <input
+                type="email"
+                name="email"
+                placeholder="du@firma.de"
+                autocomplete="email"
+                required
+              />
+            </label>
+            <label class="field">
+              <span class="form-label">Unternehmen</span>
+              <input
+                type="text"
+                name="company"
+                placeholder="Firmenname"
+                autocomplete="organization"
+              />
+            </label>
+            <label class="field">
+              <span class="form-label">Leistung</span>
+              <select name="service" required>
+                <option value="">Auswahlen</option>
+                <option value="Web Application Pentest">Web Application Pentest</option>
+                <option value="API Security Assessment">API Security Assessment</option>
+                <option value="Infrastructure Review">Infrastructure Review</option>
+                <option value="Retest &amp; Beratung">Retest &amp; Beratung</option>
+              </select>
+            </label>
+          </div>
+          <label class="field field-full">
+            <span class="form-label">Anfrage</span>
+            <textarea
+              name="inquiry"
+              placeholder="Scope, Zielsysteme, Zeitfenster oder konkrete Fragen"
+              required
+            ></textarea>
+          </label>
+          <div class="form-actions">
+            <button class="button button-primary" type="submit">Anfrage senden</button>
+          </div>
+        </form>
       </section>
     </main>
   </body>

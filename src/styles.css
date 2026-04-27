@@ -120,7 +120,8 @@ h3,
 .hero-proof span,
 .service-card span,
 .process-grid strong,
-.panel-label {
+.panel-label,
+.form-label {
   font-family: 'Rajdhani', sans-serif;
   letter-spacing: 0;
 }
@@ -155,6 +156,34 @@ h3,
 .site-nav a:hover {
   color: var(--gold-bright);
   background: rgba(215, 173, 97, 0.08);
+}
+
+.menu-toggle {
+  display: none;
+  width: 46px;
+  height: 46px;
+  flex: 0 0 46px;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 5px;
+  padding: 0;
+  border: 1px solid rgba(215, 173, 97, 0.36);
+  border-radius: 6px;
+  color: var(--gold-bright);
+  background: rgba(215, 173, 97, 0.08);
+  cursor: pointer;
+}
+
+.menu-toggle span {
+  display: block;
+  width: 19px;
+  height: 2px;
+  border-radius: 999px;
+  background: currentColor;
+  transition:
+    transform 180ms ease,
+    opacity 180ms ease;
 }
 
 main {
@@ -375,7 +404,7 @@ h3 {
 .process-grid p,
 .trust-copy p,
 .signal-panel li,
-.cta-section p {
+.contact-copy p {
   color: var(--muted);
   font-size: 1.03rem;
 }
@@ -405,7 +434,7 @@ h3 {
 }
 
 .trust-section,
-.cta-section {
+.contact-section {
   display: grid;
   grid-template-columns: minmax(0, 1fr) minmax(320px, 0.72fr);
   gap: 32px;
@@ -439,35 +468,119 @@ h3 {
   padding-left: 20px;
 }
 
-.cta-section {
-  align-items: center;
+.contact-section {
   border-top: 1px solid var(--line);
 }
 
-.cta-section p {
+.contact-copy p {
   max-width: 650px;
   margin-top: 16px;
 }
 
-.contact-link {
-  display: flex;
-  min-height: 92px;
-  align-items: center;
-  justify-content: center;
-  padding: 18px;
-  border: 1px solid rgba(215, 173, 97, 0.48);
-  border-radius: 8px;
+.contact-mail {
+  display: inline-flex;
+  margin-top: 24px;
   color: var(--gold-bright);
-  background: rgba(215, 173, 97, 0.08);
-  box-shadow: var(--shadow);
   font-family: 'Rajdhani', sans-serif;
-  font-size: 1.45rem;
+  font-size: 1.25rem;
   font-weight: 700;
 }
 
-.contact-link:hover {
-  border-color: var(--gold-bright);
-  background: rgba(215, 173, 97, 0.14);
+.contact-mail:hover {
+  color: #fff8ea;
+}
+
+.inquiry-form {
+  display: grid;
+  gap: 16px;
+  padding: 24px;
+  border: 1px solid rgba(215, 173, 97, 0.48);
+  border-radius: 8px;
+  background:
+    linear-gradient(180deg, rgba(215, 173, 97, 0.08), rgba(16, 24, 24, 0.9)),
+    var(--panel);
+  box-shadow: var(--shadow);
+}
+
+.form-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 14px;
+}
+
+.field {
+  display: grid;
+  gap: 7px;
+  min-width: 0;
+}
+
+.field-full {
+  grid-column: 1 / -1;
+}
+
+.form-label {
+  color: var(--gold-bright);
+  font-size: 1rem;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+.field input,
+.field select,
+.field textarea {
+  width: 100%;
+  min-height: 50px;
+  padding: 12px 13px;
+  border: 1px solid rgba(255, 255, 255, 0.13);
+  border-radius: 4px;
+  color: var(--text);
+  background: rgba(8, 13, 13, 0.72);
+  font: inherit;
+  outline: none;
+  transition:
+    border-color 160ms ease,
+    box-shadow 160ms ease,
+    background-color 160ms ease;
+}
+
+.field select {
+  appearance: none;
+  background-image:
+    linear-gradient(45deg, transparent 50%, var(--gold-bright) 50%),
+    linear-gradient(135deg, var(--gold-bright) 50%, transparent 50%);
+  background-position:
+    calc(100% - 18px) 21px,
+    calc(100% - 12px) 21px;
+  background-size: 6px 6px, 6px 6px;
+  background-repeat: no-repeat;
+}
+
+.field textarea {
+  min-height: 150px;
+  resize: vertical;
+}
+
+.field input::placeholder,
+.field textarea::placeholder {
+  color: #777f7d;
+}
+
+.field input:focus,
+.field select:focus,
+.field textarea:focus {
+  border-color: rgba(240, 211, 139, 0.76);
+  background: rgba(8, 13, 13, 0.9);
+  box-shadow: 0 0 0 3px rgba(215, 173, 97, 0.13);
+}
+
+.form-actions {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.inquiry-form .button {
+  border: 0;
+  cursor: pointer;
 }
 
 @media (max-width: 1080px) {
@@ -484,19 +597,80 @@ h3 {
 
 @media (max-width: 820px) {
   .site-header {
-    position: relative;
-    flex-direction: column;
-    align-items: stretch;
+    top: 10px;
+    min-height: 66px;
+    margin-top: 10px;
+    padding: 8px 10px;
+    transition:
+      transform 220ms ease,
+      opacity 220ms ease;
+  }
+
+  .site-header.is-scrolled-out {
+    transform: translateY(calc(-100% - 18px));
+    opacity: 0;
+    pointer-events: none;
+  }
+
+  .site-header.nav-open {
+    z-index: 50;
+  }
+
+  .brand img {
+    width: 44px;
+    height: 44px;
+  }
+
+  .menu-toggle {
+    display: inline-flex;
+  }
+
+  .site-header.nav-open .menu-toggle span:nth-child(1) {
+    transform: translateY(7px) rotate(45deg);
+  }
+
+  .site-header.nav-open .menu-toggle span:nth-child(2) {
+    opacity: 0;
+  }
+
+  .site-header.nav-open .menu-toggle span:nth-child(3) {
+    transform: translateY(-7px) rotate(-45deg);
   }
 
   .site-nav {
-    justify-content: space-between;
+    position: absolute;
+    top: calc(100% + 8px);
+    right: 0;
+    left: 0;
+    display: grid;
+    gap: 2px;
+    padding: 8px;
+    border: 1px solid rgba(215, 173, 97, 0.28);
+    border-radius: 8px;
+    background: rgba(8, 13, 13, 0.96);
+    box-shadow: var(--shadow);
+    opacity: 0;
+    pointer-events: none;
+    transform: translateY(-8px);
+    transition:
+      opacity 180ms ease,
+      transform 180ms ease;
+  }
+
+  .site-header.nav-open .site-nav {
+    opacity: 1;
+    pointer-events: auto;
+    transform: translateY(0);
+  }
+
+  .site-nav a {
+    padding: 13px 14px;
   }
 
   .hero {
     min-height: auto;
-    margin-top: -118px;
-    padding-top: 220px;
+    margin-top: -92px;
+    padding-top: 182px;
     padding-bottom: 50px;
   }
 
@@ -507,15 +681,15 @@ h3 {
   .hero-emblem {
     right: 50%;
     bottom: auto;
-    top: 108px;
+    top: 88px;
     width: min(470px, 86vw);
     max-height: none;
     transform: translateX(50%);
-    opacity: 0.5;
+    opacity: 0.44;
   }
 
   .hero-content {
-    padding-top: 90px;
+    padding-top: 76px;
   }
 
   h1 {
@@ -531,7 +705,7 @@ h3 {
   }
 
   .trust-section,
-  .cta-section {
+  .contact-section {
     grid-template-columns: 1fr;
   }
 }
@@ -542,9 +716,21 @@ h3 {
     width: min(100% - 20px, 1240px);
   }
 
+  .brand {
+    gap: 10px;
+  }
+
+  .brand strong {
+    font-size: 1.06rem;
+  }
+
+  .brand small {
+    font-size: 0.74rem;
+  }
+
   .site-nav a {
-    padding: 9px 6px;
-    font-size: 0.92rem;
+    padding: 12px;
+    font-size: 0.95rem;
   }
 
   .hero {
@@ -577,8 +763,15 @@ h3 {
     min-height: 220px;
   }
 
-  .contact-link {
-    min-height: 76px;
-    font-size: 1.18rem;
+  .form-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .inquiry-form {
+    padding: 18px;
+  }
+
+  .form-actions {
+    justify-content: stretch;
   }
 }
